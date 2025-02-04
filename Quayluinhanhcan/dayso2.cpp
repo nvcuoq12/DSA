@@ -1,10 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-void seting(vector <int> &a,int n){
-    for (int i=0; i<n; i++){
-        a.push_back(i+1);
-    }
-}
 void display(vector <int> a){
     cout << "[";
     for (int i=0; i<a.size()-1; i++){
@@ -29,7 +24,10 @@ int main(){
         int n;
         cin >> n;
         vector <int> a;
-        seting(a,n);
+        for (int i=0; i<n; i++){
+            int x; cin >> x;
+            a.push_back(x);
+        }
         process(a);
         display(a);
         cout << endl;
